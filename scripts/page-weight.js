@@ -16,6 +16,6 @@ window.addEventListener('load', () => {
     const loadTime = (navEntry[0].loadEventEnd - navEntry[0].startTime);
     
     const el = document.getElementById('page-weight');
-    if (el) el.textContent = `🌱 Every click has a footprint: ~${(gramsCO2 * 1000).toFixed(0)}mg CO₂`;
+    if (el) el.textContent = `🌱 Every click has a footprint: ~${(gramsCO2 * 1000 * 1000).toFixed(0)}µg CO₂`;
   }, 1);
 });
