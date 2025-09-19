@@ -3,7 +3,8 @@ window.addEventListener('load', () => {
     let totalBytes = 0;
     const resources = performance.getEntriesByType('resource');
     resources.forEach(res => {
-      totalBytes += res.transferSize || 0;
+      // totalBytes += res.transferSize || 0; // this calculates transfer size, which is 0 if cached
+      totalBytes += res.decodedBodySize || res.encodedBodySize || 0; // this calculates actual resource size
     });
     const kb = Math.round(totalBytes / 1024);
     
@@ -16,6 +17,6 @@ window.addEventListener('load', () => {
     const loadTime = (navEntry[0].loadEventEnd - navEntry[0].startTime);
     
     const el = document.getElementById('page-weight');
-    if (el) el.textContent = `🌱 Every click has a footprint: ~${(gramsCO2 * 1000 * 1000).toFixed(0)}µg CO₂`;
+    if (el) el.textContent = `🌱 Page load footprint: ~${(gramsCO2 * 1000).toFixed(0)}mg CO₂`;
   }, 1);
 });
