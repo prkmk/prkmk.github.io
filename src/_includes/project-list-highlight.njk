@@ -1,0 +1,14 @@
+<section class="content-grid-2col">
+  {% for project in collections.projectHighlight.slice(0, site.projectLimit) %}
+    <div data-href="{{ project.url }}" class="content-project">
+      <div class="content-image-container">
+        <img class="content-image" src="{{ project.data.thumbnail_src }}" alt="Thumbnail image of {{ project.data.title }}">
+      </div>
+      <div class="content-header border-top">
+        <h3 class="content-title">{{ project.data.title }}</h3>
+        <p class="content-subtitle">{{ project.data.subtitle}}</p>
+        <p class="content-date">{{ project.date | formatMonthYear }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</section>

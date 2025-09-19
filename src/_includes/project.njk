@@ -1,0 +1,76 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="project-title">
+    <div class="header">
+      <h1>{{ title }}</h1>
+      <h4>{{ subtitle }}</h4>
+      <p class="content-date center">{{ date | formatMonthYear }}</p>
+    </div>
+    {% if title_image_src %}
+      <img src="{{ title_image_src }}" alt="Header image of {{ title }}">
+    {% endif %}
+    {% if link_button_url and link_button_label %}
+      <a href="{{ link_button_url }}" target="_blank" rel="noopener" class="button prototype-button">
+        {{ link_button_label }}
+      </a>
+    {% endif %}
+  </section>
+
+  {% if overview %}
+    <section class="project-overview">
+      <h2 class="project-overview-title">Project Overview</h2>
+      <div class="content">
+        <div class="main">
+          <h3>Challenge</h3>
+          <div class="markdown">{{ overview.challenge | markdown | safe }}</div>
+          <h3>{{ overview.objectives_heading or "Objectives" }}</h3>
+          <ul>
+            {% for item in overview.objectives %}
+              <li>{{ item | safe }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="details">
+          {% for key in ["scope", "role", "team", "tools", "duration"] %}
+            <h4>{{ key | capitalize }}</h4>
+            <ul>
+              {% for item in overview[key] %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <div class="main-content">
+    {{ content | safe }}
+  </div>
+
+  {% set projects = collections.project %}
+  {% set currentIndex = -1 %}
+  {% for p in collections.project %}
+    {% if p.url == page.url %}
+      {% set currentIndex = loop.index0 %}
+    {% endif %}
+  {% endfor %}
+  {% set prev = collections.project[currentIndex - 1] %}
+  {% set next = collections.project[currentIndex + 1] %}
+
+  <nav class="content-nav">
+    {% if prev %}
+      <a href="{{ prev.url }}">
+        <span class="label">← Previous</span>
+        <span class="title">{{ prev.data.title }}</span>
+      </a>
+    {% endif %}
+    {% if next %}
+      <a href="{{ next.url }}">
+        <span class="label">Next →</span>
+        <span class="title">{{ next.data.title }}</span>
+      </a>
+    {% endif %}
+  </nav>
+{% endblock %}

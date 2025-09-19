@@ -1,0 +1,19 @@
+{
+  "title": "Lauri Parkkamäki",
+  "description": "UX Designer focused on stuff",
+  "url": "https://parkkamaki.com",
+  "email": "lauri@parkkamaki.com",
+  "meta": {
+    "author": "Lauri Parkkamäki",
+    "copyright": "2025 Lauri Parkkamäki",
+    "keywords": "UX, sustainability, ASCII, design, portfolio"
+  },
+  "external": {
+    "LinkedIn": "https://www.linkedin.com/in/prkmk/",
+    "Figma": "https://www.figma.com/@prkmk",
+    "Medium": "https://prkmk.medium.com/",
+    "Art": "https://littlebitspace.com"
+  },
+  "projectLimit": 4,
+  "postLimit": 3
+}

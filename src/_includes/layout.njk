@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{% if title and title != "Home" %}{{ site.title }} | {{ title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.meta.author }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+
+  <meta property="og:title" content="{% if title and title != "Home" %}{{ site.title }} | {{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+  {% if noindex %}
+    <meta name="robots" content="noindex, nofollow">
+  {% else %}
+    <meta name="robots" content="index, follow">
+  {% endif %}
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <header>
+      <ul class="title">
+        <li><a href="/">{{ site.title }}</a></li>
+        {% for label, url in site.external %}
+          <li><a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a></li>
+        {% endfor %}
+        <li><a href="#" id="theme-toggle"></a></li>
+      </ul>
+      <nav>
+        <ul class="tab-nav">
+          {% for pageEntry in collections.main %}
+            <li class="{% if pageEntry.url != '/' and page.url.startsWith(pageEntry.url) or page.url == pageEntry.url %}active{% endif %}">
+              <a href="{{ pageEntry.url }}">
+                {{ pageEntry.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}{{ content | safe }}{% endblock %}
+    </main>
+
+    <footer>
+      <p>&copy; {{ site.meta.copyright }} | Built with <a href="https://www.11ty.dev/">11ty</a> | Designed by <a href="https://parkkamaki.com/">Lauri Parkkamäki</a></p>
+      <div class="co2">
+        <p class="content" id="page-weight">🌱 Every click has a footprint.</p>
+        <span class="tooltip">This site is designed this to stay light — faster for you, better for the planet.</span>
+      </div>
+    </footer>
+  </div>
+  <script src="/scripts/page-weight.js"></script>
+  <script src="/scripts/div-anchors.js"></script>
+  <script src="/scripts/theme-toggle.js"></script>
+</body>
+</html>

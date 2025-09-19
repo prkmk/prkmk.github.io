@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <section class="post-title">
+    <div class="header">
+      <h1>{{ title }}</h1>
+      <p class="content-date left">{{ date | formatMonthYear }}</p>
+    </div>
+  </section>
+
+  <div class="main-content">
+    {{ content | safe }}
+  </div>
+
+  {% set posts = collections.post %}
+  {% set currentIndex = -1 %}
+  {% for p in collections.post %}
+    {% if p.url == page.url %}
+      {% set currentIndex = loop.index0 %}
+    {% endif %}
+  {% endfor %}
+  {% set prev = collections.post[currentIndex - 1] %}
+  {% set next = collections.post[currentIndex + 1] %}
+
+  <nav class="content-nav">
+    {% if prev %}
+      <a href="{{ prev.url }}">
+        <span class="label">← Previous</span>
+        <span class="title">{{ prev.data.title }}</span>
+      </a>
+    {% endif %}
+    {% if next %}
+      <a href="{{ next.url }}">
+        <span class="label">Next →</span>
+        <span class="title">{{ next.data.title }}</span>
+      </a>
+    {% endif %}
+  </nav>
+{% endblock %}

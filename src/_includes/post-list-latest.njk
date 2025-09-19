@@ -1,0 +1,14 @@
+<section class="content-grid">
+  {% for post in collections.post.slice(0, site.postLimit) %}
+    <div data-href="{{ post.url }}" class="content-post">
+      <div class="content-header border-right">
+        <h3 class="content-title">{{ post.data.title }}</h3>
+        <p class="content-subtitle">{{ post.data.excerpt}}</p>
+        <p class="content-date">{{ post.date | formatMonthYear }}</p>
+      </div>
+      <div class="content-image-container">
+        <img class="content-image" src="{{ post.data.thumbnail_src }}" alt="Thumbnail image of {{ post.data.title }}">
+      </div>
+    </div>
+  {% endfor %}
+</section>
