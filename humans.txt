@@ -1,0 +1,25 @@
+/* TEAM */
+Designer: Lauri Parkkamäki
+Site: https://parkkamaki.com
+From: Earth
+
+/* THANKS */
+Eleventy, Open Source community
+
+/* CONTACT */
+Email: lauri@parkkamaki.com
+
+
+
+TODO:
+
+[x] robots
+[x] humans
+[ ] contact
+[x] sitemap? hostname from site.json
+[x] meta tags
+[x] manifest.webmanifest
+[?] favicon?
+[x] FONTs (no third party)
+[x] 404
+
