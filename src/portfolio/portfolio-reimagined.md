@@ -1,26 +1,26 @@
 --- 
 tags: [project, highlight]
-date: 2025-06-16
+date: 2026-04-22
 layout: project.njk
 
 title: Portfolio Reimagined
 subtitle: How I improved the UX of this portfolio by treating it like a UX project
 
-thumbnail_src: ./src/images/tn.png
+thumbnail_src: ./src/images/tn-portfolio.png
 
 overview:
   challenge: |
     Ideally, a portfolio is a passion project you update regularly but often it's treated as a static collection of past work instead of a rich, living medium. I wanted to challenge myself by reimagining what a portfolio should be. At its best, it can serve as a business card — a clear, insightful snapshot of your skills and thinking — but for me, that wasn't enough. I wanted it to reflect my personal approach to design, my philosophy, and my ability to solve problems.
 
-    So I treated it as a UX project from start to finish. I let the fundamentals guide me; clear content structure, lightweight code, and a deep understanding of my two key user groups acted as the pillars for the design. The result is a portfolio that's not just a collection of my past projects, but a tailored experience designed to showcase my thinking, style, philosophy, and future potential.
+    So I treated it as a UX project from start to finish. I let the fundamentals guide me; clear content structure, lightweight code, and a deep understanding of the key user groups acted as the pillars for the design. The result is a portfolio that's not just a collection of my past projects, but a tailored experience designed to showcase my thinking, style, philosophy, and future potential.
 
     To maximize maintainability, performance, and authenticity, I chose to build it with Eleventy and a lightweight stack — letting content drive the structure and letting my code reflect my values.
 
     The code is free and open-source. Feel free to reuse it if you find it helpful.
   objectives:
-    - Enhance ease of updating portfolio content
+    - Enhance maintainability
     - Provide a smooth experience for recruiters and collaborators
-    - Maximize performance across all devices
+    - Minimise carbon footprint
   scope:
     - User Experience Improvement
     - Fast, lightweight, SEO-friendly portfolio
@@ -40,84 +40,80 @@ overview:
 
 [toc]
 
-## The Why and The What
+## Background Story
 
-What actually is a portfolio? I have asked this question many times without finding the answer that satisfies me. I think, while it may look like a nice-looking website, portfolio is an enormous project of self-discovery. It is not just the content you put on it but it's also the form itself. This is how and why it's a crucial part of a designer's identity. Regardless of the content, you don't need a fancy website for portfolio; why cannot it just be a slideshow? I think whatever reflects your values and skillset the best is the most suitable format for your portfolio. And I think that is *the core essence* of it all - using the form to convey yourself. It gets very personal very quickly and that usually makes it a very difficult project. That brings me to the next question: why am I making this portfolio as a website?
+It was over 2 years of not touching my portfolio. I didn't want to open nor update it and I didn't know why. I had created my portfolio during my master's degree studies because I thought every designer should have one to apply for any job. I had programmed it with the tools and methods I was the most familiar at the time. My portfolio was a React single-page-application. All pages were implemented as components on top of components. I remember spending lots of time polishing the style, changing typography, and tweaking the layouts. I think my idea was to have a sleek and clean portfolio that has good UX and minimal aesthetics.
 
-I think I could give a ton of different answers but at the core are
-- I have used the internet from a young age so it feels like a natural medium
-- I can program little things and believe vibe coding can handle the rest
-- I believe I can better show my values comparing this website to your average website (I'm not saying this is technically better)
+It had clean and intuitive navigation, clear structure for the project pages, consistent light grey style, and a professional-looking picture of me. In a sentence, the portfolio felt like it belongs to a technology-oriented developer who tries to shift to design. And to be honest, that was me. The portfolio was also sluggish to load, had UX mistakes done for the sake of what I thought was minimalism, and just looked a bit off. I never felt it truly represents me although it might have represented my skills. I was not proud of my portfolio and I think I was actually a bit ashamed of it. Something needed to change.
 
-Notice that by website I mean a website, not web app. For the average user, this doesn't seem to be a big deal but it's actually a bigger issue than you might think. The majority of the internet would be better off as static websites instead of web apps. With the latter, each page loads the whole framework even if the user only visited the landing page. That's unnecessary data and carbon emissions.
+![A picture of me around the age of 4 using an early 2000's laptop](./src/images/portfolio-retro_laptop.jpg "A non-professional picture of me")
 
-So I naturally lean towards creating my portfolio as a webpage but that brought me more problems: how do I create a website that's up to my standards? How do I use the form to convey something more than just the contents? Where do I find the energy to actually finish it? The answer to the first question is obvious: find a good framework and spend enough hours until you're happy with it. The second question caused me to struggle but I finally found things to make the form elevate the contents (I'll write about it detail a bit later). The third question was answered by trying my best to find the joy of coding again. At best, portfolio is a medium to tell a story — a story about how I solve problems, how I learn, how I grow, and my philosophy and values.
-
-### The Core Issue
-
-Alright, let's go back a little. I struggled a lot creating my first portfolio. By the time it was finished, I was exhausted and did not want to touch it. The result was only *good enough*. Time went on and I never got to updating my portfolio; it was so difficult. I don't think it reflected anything I stood for except it looked modern and it was responsive. The design was decent at best and I was not proud of my portfolio. It didn't look like me. It did not truly show my thinking nor personality. I wanted to change all that. Updating it felt more of a struggle than building a new one.
-
-### My Background
-
-I have a bachelors degree in software development so it was always obvious I should create my own portfolio from scratch. I also had a master's degree in HTI which meant - at least to me - that I have to design it myself as well. As a hobby, I draw ASCII and PETSCII art alongside with other textmode mediums which is motivated by my appreciation towards technological lightweight solutions. I prefer simple tools whenever they fit for the job; usually you don't need the fanciest and shiniest software nor hardware. Less is more in this sense. This mixed background either stems from my philosophy or has guided me towards it. Either way I thought my portfolio should highlight the lo-fi technologies.
+But why? I had changed; I had grown as a designer, finished my studies, gained work experience, and, most of all, grown as a person. I had reached the point where I realised my portfolio should represent myself as a person, not just a generic collection of work. At this point I didn't know how to do it or how much time it would take but I really wanted to recreate everything from scratch with intent and attention to detail.
 
 
-## Who's The User Anyway?
 
-To ground this, I identified two key audiences:
+## What Actually Is A Portfolio?
 
-- Recruiters
-busy people who want to quickly gauge my skills, style, and potential
-- Prospective collaborators
-people who might spend a little more time digging through my contents
+I had to start from the beginning. That means starting from an empty programming project, right? No. By beginning I mean the concept. I don't think I knew what portfolio meant. I held this belief that a good portfolio is a fancy website with flashy graphics. I'm not sure how common a belief this is but it was quite strong in me. 
 
-I'll group the audiences together as they're funtionally dissimilar.
+Starting to question every single definition and assumption I had regarding portfolios, I began building the concept from ground up. I spent time thinking about what a portfolio _is_ as a concept and how to embody that conceptualisation. This could have been a quicker process if I had just looked up the word in a dictionary. For example, [Merriam-Webster](https://www.merriam-webster.com/dictionary/portfolio) gives two noteworthy definitions:
 
-But wait! I also view my own portfolio a lot while creating or editing content. Am I another end-user? Yes! So what are my user needs:
-- a lightweight portfolio
-- easy to keep up to date
-- a portfolio that evolves with me
+> A selection of a student's work (such as papers and tests) compiled over a period of time and used for assessing performance or progress.
+>
+> A hinged cover or flexible case for carrying loose papers, pictures, or pamphlets.
+
+The first definition pretty much matches what I had though: a selection of prior work for some sort of assessment. In my context, the assessment is most often recruiting but not necessarily so. I picked the second description because I feel like that goes to the root of what portfolio is: a structure that holds different kinds of content. Now that is what I was looking for. So it's not necessarily a website, does not have to include any graphics at all, and isn't solely for assessment purposes.
+
+So, a portfolio is just a container for selected work but could it be more than that. And I feel like work means just something I have done. Would it be possible to let portfolio convey something from yourself in addition to the obvious? I like to think it can and maybe this project will test that hypothesis. I think my ultimate goal is to make it some sort of a temporal representation of some parts of myself. I believe, at best, portfolio is a medium to tell your story — a story about how you solve problems, how you learn, how you grow, and your philosophy and values. This potential is what I aim for.
 
 
-Based on the two user groups
-My research — job ad analysis, portfolio reviews, and reflection on my own goals — revealed a few key needs:
+## Why Am I Doing It This Way?
 
-✅ Conciseness: recruiters need to absorb content quickly.
-✅ Performance: a lightweight, fast-loading site signals professionalism.
-✅ Personality: a portfolio should reflect a designer's unique style — not a generic template. (however, style should not take attention away from the content!)
-✅ Scalability: adding new projects should be effortless, without wrestling with code.
-✅ Responsiveness: recruiters and collaborators should be able to view content on any device.
+To maximise shareability in the 21st century, I feel a portfolio should be in some digital format. I don't necessarily think an online portfolio is any better than a slideshow or even a `.txt` file. The form can put restriction on the type of content you can include. I actually think the most minimal format on which you're still able to highlight your relevant skills is probably the best one.
 
-## Designing My Portfolio Experience
+You're reading this on a browser so it means I decided to create my portfolio as a website. Why did I do that when I just outlined that it's not a requirement? I think having grown up in the age on the internet is the main driver to creating the portfolio as a website. Additionally, I feel like it's a good medium for my skillset: UX/UI design, programming, problem solving, thinking. Since I was creating this as a website, I had to put some boundaries to put more focus my skills rather than what's possible on the internet nowadays.
 
-Using these insights, I defined the portfolio's architecture and style.
-Instead of over-engineering, I kept it lightweight and semantic — letting content guide structure.
-Some key choices I made:
+There are a lot of pitfalls when you create a website: making it too plain, spending countless of hours trying irrelevant things only you think are cool, adding too many features, making it difficult to maintain, relying on too many external libraries. There are practically no constraints, and that is not necessarily a good thing for creativity. Research shows that [creativity benefits from a healthy dose of constraints](https://pure.eur.nl/ws/portalfiles/portal/48315641/Repub_127602.pdf). So it might be wise to set yourself some constraints when working on a digital canvas.
 
-✅ Eleventy + Markdown:
-I would love a portfolio made of pure ASCII as it would be as lightweight as possible. However, relying on pure text would not reach the modern look and feel standards I have. 11ty + md lets me treat portfolio content as pure data — adding a new project is as simple as adding a .md file. It's close enough!
 
-✅ Clean UI, Pure CSS:
-A small set of utility classes lets me style quickly and efficiently without bloat. All this should be pre-set so when content is added, you don't need to fiddle with the layout or style.
+## Who Are The Users?
 
-✅ Design Principle:
-Every piece — from the grid to the color — highlights content first and my style second.
-Typography, spacing, and components were designed to maximize readability and scannability.
+It's the recruiters. Let's move on. You'd think it's that simple, wouldn't you? Actually I managed to find three user groups: recruiters, collaborators or colleagues, and me. Yes, I am a user as I maintain the website.
 
-✅ Performance (true to the system/browser):
-- No external typography
-- Images (both local and external) should be optimised on build
-- Utilising predictable html components
+![An illustration of the user groups](./src/images/portfolio-users.png "Users. Which of them are you?")
 
-### Philosophy
+Recruiters might visit this website as a part of recruitment process. For them, I think, it's important that relevant content is highlighted and projects are described clearly. I need to have a clear structure, intuitive navigation, and highlight key data from projects.
 
-The guiding philosophy behind the design is digital minimalism. It's not only visual, it also applies to the underlying site. This website is pure `html`, `css` and as little `javascript` as possible. At least that's what you see. The other user group, the maintaner, me, gets to work with `md` files as they are used for the content. I think that is a pretty minimal yet functional solution for both user groups.
+For collaborators and colleagues, I think, it would be typical to browse through the pages reading through what kind of projects I've been involved in the past. I would guess they might visit this website on a mobile device so apparently responsiveness is a requirement. Maybe they'd also like to read about how I think and approach things.
 
-### Sustainability
+For myself, I need to structure the portfolio so that it's easy to maintain and add projects. I need to avoid poor maintainability at all costs because that's what sank my last portfolio. Additionally, I can set whatever requirements I like but I think the core things include it being lightweight, platform that is able to evolve, and can include more personal stuff and philosophy. The last thing I want is a portfolio that feels stiff and plasticy. Finally, this time I need to be able to be able to be proud to be associated with my portfolio.
 
-However, minimalism isn't be-all end-all reason. It's a method to achieve a more sustainable digital product. A simple site equals directly to less data transfer. The biggest data hoarder on this website is the images obviously. So I had to do something about it. To reduce lifetime emissions, I realised it's better to optimise images so your browser won't have to load the largest resolution of every image. Catering a wide range of different sizes of the same image bloated the build folder size a lot but again, the lifetime emissions will be lower this way.
 
-Did you know each click causes some carbon emissions? I wanted to underline that in a subtle way by adding a tiny indicator in the footer. It shows you how much your last click caused carbon emissions. Notice that it's a rough estimate following this formula:
+
+## How did I do it?
+
+I constrained my work quite a bit based on the requirements of the portfolio and my skillset. I did not want to get overwhelmed with all the options and graphics and styles and typography and multimedia content and non-standard scrolling and effects and whatnot. Instead, I set clear boundaries which guided my design and implementation but not the content.
+
+### 1st Constraint: a static website
+
+I started by thinking about maintainability and filetypes. How can I make a portfolio that _I_ find easy to maintain? For me, simpler files feel better but I knew `.txt` files might be a bit too bare-boned. The file type one step more complex I thought was `.md` which are basically textfiles that support headings and images. That sounded like a perfect match. The next step was to find a framework or a website generator that uses `.md` files to build websites. I decided to go with a static website for reasons given [a bit later](#2nd-constraint%3A-low-carbon-emissions). There were options of which [11ty](https://www.11ty.dev/) sounded perfect due to its [good performance](https://www.11ty.dev/docs/performance/). So now I have a fast and lightweight stack. On to the next step.
+
+### 2nd constraint: low carbon emissions
+
+Did you know that [each click causes carbon emissions](https://link.springer.com/article/10.1007/s12045-025-1907-x)? Computers and servers run on electricity and to minimise the electricity consumption I could minimise the data loaded. That's likely the only way of getting anywhere with this goal. My portfolio being a static website means in practical terms that your browser loads each page separately. This might make the navigation on the website slower but doesn't require your browser to load a complex framework for such a simple website. Even if the navigation was slightly slower that should not be a problem if the site is light enough. All in all, your browser loads less data when visiting my website than it would if I had used some framework. Also, I wrote small scripts to minimise the output files and to optimise images. The image optimisation makes the website take more space on the server but it should reduce the loaded data. This is how I managed to keep the carbon emissions low. You could additionally argue that this website being lightweight is a UX win as well.
+
+### 3rd constraint: semantic website with minimal styling
+
+At first I built the website with the default styles to let the content define the structure; everything is designed content-first. Only then I started adding a little styling to the website but I wanted it to be as minimal as possible. The styling itself is pure `css`. My goal was to style it so that the page would look empty and boring with no content. I went as simple as possible by drawing outlines of certain components with thin strokes. Adding a little padding here and there and voilà! I also did not add any fonts or references to external fonts; all typography is directly from your browser. This is both a minimal design decision and a way to cut down the emissions.
+
+The style of this website could be defined as minimal brutalism which was inspired by [brutalist architecture](https://en.wikipedia.org/wiki/Brutalist_architecture). I chose or gravitated towards this style as, in essence, it highlights the functionality without adding visual fluff. Lines should be straight and predictable.
+
+I paired the style with some modern features people expect nowadays: intuitive clickable regions, responsiveness, and dark mode. Since I had already implemented fonts so that I do not get to explicitly choose how it's displayed on your device, I did the same for the dark mode. If your device is on dark mode this website should load with dark mode on as well. This all fits with the core design principle: portfolio is just a structure for content.
+
+
+### Embedding My Values
+
+As you can already tell, sustainability is very important to me. This website being lightweight doesn't do much in the grand scheme of things. However, I wanted to highlight this and raise awareness a little, it's the least I can do. I added a little carbon emission calculator at the bottom which roughly estimates the impact on load:
 
 > grams CO₂ = total bytes × (energy per GB × grid carbon density / bytes per GB)
 
@@ -125,155 +121,44 @@ where
 - energy per GB = 0.81 kWh/GB
 - grid carbon density = 442 gCO₂/kWh
 - bytes per GB = 1024³
-- 
 
-The reason is not to show you the exact amount of emissions but make you think about how light-weight websites and more conscious consumption of web content can be a part of the solution. This is raising awareness on grassroots level. Try pressing back button on your browser and then check the carbon indicator!
+The point is not to give an exact value, because dedicated [carbon emission calculators](https://1clickimpact.com/website-carbon/parkkamaki-com) exists, but to make you think even a little.
 
-### Style
+![An illustration of a bonsai tree](./src/images/portfolio-bonsai.png "Bonsai - sustainability and minimalism in one")
 
-You probably noticed the bare-bones look already, right? The style is called minimal brutalism. I naturally leaned towards it as I prioritised functionality and let the form follow. Moreover, I thought the contrast between the website and its contents highlight the contents. Think it this way: the portfolio forms the structure while the content provides the shape.
+You might also have noticed I'm into minimalism in general. I hope the style and the technology stack gave that away. I used to think more is more but nowadays I think digital systems are required but they do not be that complicated most of the times. I prefer simpler solutions that do not try to sell something extra with visual popcorn. For me, minimalism is not having less things but more about paying more attention to what's important.
 
-I chose to use thin outlines to visualise the sctructure because it simply works. It creates visual areas which are intuitive for us humans. Buttons look like buttons and even have a little pressing animation. Links look like links so you get what you'd expect. Images come with a caption to simply tell what the image is about. Everything is what it looks like. I strived towards functional aesthetics and relied on vertically scrolling "tall" pages to create almost like a digital version of what a newspaper could be.
+I tend to be a little perfectionist especially with creative projects. Since I had set meaningful constraints, I feel like I could perfect my design within those. I did not know what the portfolio would look like in the end but I am quite happy with the results.
 
-Additionally, the fact that I chose not to add any custom fonts reduces unnecessary data load and I think the default fonts of your browser handle the job well enough - it is functional.
 
-## Did It Work?
+<!-- ### Mandatory Note On AI
 
-Once implemented, I evaluated the portfolio against my goals:
+I did use AI to create this website. I used it to help me with programming but refused to use it to create the content.
 
-✅ Performance:
-Page load under 1 second on 3G; Lighthouse scores above 90 across all metrics.
+I feel like at the moment AI is being used everywhere without thinking. Often, it doesn't add any value and changes the vibes of content ever so slightly. AI-made content often feels plasticy and soulless and that is what the internet feels like more and more every day.
 
-✅ Usability:
-User testing with recruiters and collaborators confirmed they could find key information quickly and appreciate the clear structure.
 
-✅ Maintainability:
-Adding a new project was a matter of dropping in a Markdown file and adding a photo — no messy code rewrites.
+## Results
 
-## What I Learned and Where It's Heading
+performance (lighthouse score)
 
-Designing my portfolio was more than a coding challenge — it was a deep UX exercise in framing my own narrative.
-Some key takeaways:
+usability (make sure it's informative and intuitive)
 
-✅ Framework matters:
-Using lightweight technologies made it a flexible, adaptable platform — perfect for future growth.
+maintainability (describe how it is adding a new project) -->
 
-✅ Design for your goals:
-Your portfolio isn't a universal template; it's a tool tailored to your unique needs.
 
-✅ Every detail communicates:
-From typography choices to loading speeds, each decision adds up to a coherent story about who you are as a designer.
+## Takeaways
 
-Looking forward, I'd like to:
-➥ Experiment with adding small interactive components.
-➥ Expand my portfolio to showcase not just finished products but process, prototypes, and future ideas.
+Portfolio is more than writing content and programming a website. It's a project of self-discovery and self-expression. I feel like this version manages to capture some parts of me as it, in a way, looks like me. Portfolio also is definitely not a universal template although mine is free to download and modify. The design of a portfolio should start from the actual requirements you have and what you want to convey with it.
 
----
+I am grateful that I spent so much time processing the thoughts and progressed meaningfully through the steps although it wasn't as clean process as I described. But hey, that's life. I think allowing it to be slightly messy might be beneficial. I'm happy that I did not default to React as I had done before. Instead I took the time to do look for tools and methods that feel intuitive and simple enough to me. This I think is also where I let the substance define the structure; I had my own requirements to which I matched the tool, not the other way around.
 
-## The Why and The What
+Every ~~detail~~ choice matters. And by choice I mean everything. Not making a choice is also a choice. Some people might be far better off with a premade template or a website builder. But that's not me. I chose to do it this way and I think I have outlined my decision-making well enough in the previous chapters. To give you a few examples as a reminder, I chose to not explicitly choose the typography, I chose to write this project's text in this narrative freeform style, I chose the images and to implement optimisation, I chose to optimise the load for you and the planet, and I chose to maximise the maintainability for myself. These all were conscious choices. I'm not saying you have to do it as painstakingly thoroughly as I did but I did it by a choice.
 
-What actually is a portfolio? What should it contain and convey? If there were a one-size-fits-all solution, we'd all be using it by now. But portfolios are much more than a directory of past projects — or at least, that's how I see it.
+In the future, I would like to expand my portfolio to include things from my hobbies and interests which are plenty.
 
-Creating a portfolio isn't about ticking a box. It's about framing your narrative. It's about showing who you are, how you solve problems, and where you're headed. It should reflect your thinking, your craft, and your future direction — not just your past. But when I first tried to create mine, it fell short in all these ways.
+If you liked what you read, you can tap the heart below. It's not tracked or stored anywhere; it's simply there to give you a way to mark the moment. And if you'd like to actually reach out, feel free to email me at [lauri@parkkamaki.com](mailto:lauri@parkkamaki.com).
 
-### The Core Issue
-
-I struggled a lot designing and developing my first portfolio.
-By the time I finished it, I was completely worn out. I avoided touching it afterwards — adding a new piece or updating something felt heavy and cumbersome. Time went on, and it fell further and further out of sync with who I was becoming.
-
-It's true the portfolio looked reasonably modern and it was responsive across devices — a baseline I felt I should be proud of — but it fell flat in reflecting me. The design was decent at best; it didn't show what made me, me. It felt more like a template filled in with my content instead of a medium for my own expression. That was a key turning point: I decided I wanted to change all that.
-
-### My Background
-
-I have a bachelor's degree in Software Development and a master's degree in Human-Technology Interaction (HTI). Naturally, I felt it was my responsibility to create this portfolio myself — not to grab a pre-made template, but to piece it together in a way that made sense for me. My background meant I understood the technical side, while my education in HTI meant I was able to approach it from a human-centric view — designing not just for myself, but for my future viewers.
-
-As a hobby, I draw ASCII and PETSCII art alongside other textmode media. There's something profoundly charming about creating rich, expressive art with a small set of lightweight components. It resonates with my view that you often need less, not more, to make something powerful. I prefer simple tools when they serve the job well; you typically don't need the fanciest, shiniest software or hardware — less is more in this sense.
-
-### Outlining the Questions
-
-This portfolio wasn't meant to be “just another collection of projects”—it was meant to be a true reflection of my thinking, my craft, and my future direction as a designer. It made me realize I wanted it to act not just as a directory of past work, but as a medium to tell a story — a story about how I solve problems, how I learn, how I grow, and what I care about.
-
-This reflection raised a few key questions in my mind:
-
-- Why do portfolios often miss the mark in communicating a designer's unique approach?
-
-- What should a portfolio showcase, aside from finished products?
-
-- How can I create a portfolio that looks and feels like me — reflecting my style and my values?
-
-I did not seek to find answers to these questions but have them align my thinking with my goals.
-
-## Who's Viewing It Anyway?
-
-To ground this thinking, I identified two key audiences I need to serve:
-
-➥ Primary: recruiters and prospective collaborators.
-They're busy people who want to quickly gauge my skills, style, and potential. They need to absorb key information fast, without wading through fluff. It's a delicate balance — reflecting my unique approach while honoring their time and goals.
-
-➥ Secondary: me — the portfolio's builder and curator.
-I need something lightweight, adaptable, and easy enough to keep up to date. It should grow and evolve alongside me — a portfolio that's a tool for future expression, not a static showcase.
-
-My research — job ad analysis, portfolio reviews, and reflection on my own goals — revealed a few key needs:
-
-✅ Conciseness — recruiters need to absorb content quickly.
-✅ Performance — a lightweight, fast-loading site signals professionalism.
-✅ Personality — a portfolio should reflect a designer's unique style, without letting style undermine content.
-✅ Scalability — adding a new project should be effortless, without wrestling with code.
-✅ Responsiveness — recruiters and collaborators should be able to view content on any device.
-
-## Designing My Portfolio Experience
-
-Using these insights, I defined the portfolio's architecture and style.
-Instead of over-engineering it, I kept it lightweight and semantic — letting content guide structure.
-
-Some key choices I made:
-
-✅ Eleventy + Markdown:
-I would love a portfolio made of pure ASCII; it would be lightweight, efficient, and true to my aesthetic. But pure text would feel a bit unconventional in today's context. Eleventy lets me treat portfolio content as pure data — adding a new project is as simple as adding a .md file. It's close enough to pure simplicity while honoring modern standards.
-
-✅ Clean UI, Pure CSS:
-A small set of utility classes lets me style quickly and efficiently without needless bloat. All this is pre-done — when adding content, I don't need to wrestle with styling or structure.
-
-✅ Design Principle:
-Every piece — from the grid to the color — highlights content first and my style second. Typography, spacing, and components were designed to maximize readability and scannability.
-
-✅ Performance (true to the system/browser):
-
-    No external typography — I rely on fallback fonts.
-
-    All images, whether local or external, are optimized at build time.
-
-    The HTML components follow predictable structures, yielding a lightweight, fast-loading page.
-
-## Did It Work?
-
-Once implemented, I evaluated the portfolio against my goals:
-
-✅ Performance:
-Page load under 1 second on 3G; Lighthouse scores above 90 across all metrics — reflecting a lightweight, well-optimized site.
-
-✅ Usability:
-User testing with recruiters and collaborators confirmed they could find key information quickly and appreciate the clear structure. The portfolio struck a balance between form and content — it wasn't a mess of distractions, but it wasn't barren either.
-
-✅ Maintainability:
-Adding a new project was a matter of dropping in a Markdown file and adding a photo — no messy code rewrites. The portfolio evolves gracefully alongside me.
-
-## What I Learned and Where It's Heading
-
-Designing my portfolio was more than a coding challenge — it was a deep UX exercise in framing my own narrative.
-Some key takeaways from this process:
-
-✅ Framework matters:
-Using lightweight technologies made it a flexible, adaptable platform — perfect for future growth.
-
-✅ Design for your goals:
-Your portfolio isn't a universal template; it's a tool tailored to your unique needs.
-
-✅ Every detail communicates:
-From typography choices to loading speeds, each decision adds up to a coherent story about who you are as a designer.
-
-Looking forward, I'd like to:
-
-➥ Experiment with adding small interactive components — not for needless complexity, but to illuminate aspects of my process.
-
-➥ Expand my portfolio to showcase not just finished products, but process, prototypes, future ideas, and experiments — reflecting a more holistic view of my practice.
+<button class="button like-button" data-start="2026-04-22">
+  <span class="like-count">0</span> ❤️
+</button>
