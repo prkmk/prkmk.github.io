@@ -6,9 +6,7 @@ order: 1
 ---
 
 # Lauri Parkkamäki
-As a UX designer, I believe in the power of design to shape behavior—toward sustainability, ethics, and simplicity. My work is rooted in the idea that even small interactions can create meaningful change.
-
-Over the past two years, I’ve led the UX overhaul for welding automation software, creating a design system that brings cohesion and modernity to an industry ready for innovation.
+UX/UI designer specialising in interaction design, design systems, and ethical design. I use Figma to create digital products that are clear, accessible, and built to nudge people and organisations toward better decisions.
 
 &nbsp;
 &nbsp;
@@ -38,4 +36,4 @@ Over the past two years, I’ve led the UX overhaul for welding automation softw
 Open to collaboration or just want to say hi?
 
 You can reach me directly at lauri@parkkamaki.com — whether you have a project in mind or just want to connect.
-My <a href="/parkkamaki-cv-2025-4.pdf" target="_blank" rel="noopener noreferrer">CV</a> is available for download if you'd like a more formal view of my experience.
+My <a href="/cv">CV</a> is available for download if you'd like a more formal view of my experience.

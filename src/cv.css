@@ -1,0 +1,299 @@
+/*
+  cv.css — CV page styles for parkkamaki.com
+  ─────────────────────────────────────────────────────────────
+  Uses CSS variables from styles.css (--text-primary, --text-secondary,
+  --bg, --link, --link-hover, --line, --font-sans).
+  No custom variables needed — everything inherits from the site.
+
+  Place this file at: src/cv.css
+  It is referenced directly in cv.njk via <link rel="stylesheet">.
+  Make sure .eleventy.js passes through src/cv.css to the output.
+  If your build already passes through all CSS files, no change needed.
+  If not, add this to .eleventy.js:
+    eleventyConfig.addPassthroughCopy("src/cv.css");
+*/
+
+/* ── Layout ─────────────────────────────────────────── */
+
+body {
+  border: none;
+}
+
+.cv {
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+.cv-download {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+
+.cv-header {
+  margin-bottom: 2rem;
+}
+
+.cv-name {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+}
+
+.cv-jobtitle {
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.cv-contact a {
+  display: block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cv-contact a:first-child {
+  padding-left: 0;
+}
+
+.cv-contact a:hover {
+  color: var(--bg);
+  background-color: var(--text-primary);
+}
+
+.cv-summary {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 58ch;
+}
+
+/* ── Section ─────────────────────────────────────────── */
+
+.cv-section {
+  margin-bottom: 2rem;
+  border-top: var(--line) solid var(--text-primary);
+}
+
+.cv-section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  padding: 2rem 0 0.5rem 0;
+  line-height: 1;
+}
+
+/* ── Entry ───────────────────────────────────────────── */
+
+.cv-entry {
+  padding: 1rem 0;
+}
+
+.cv-entry:last-child {
+  padding: 1rem 0 0 0;
+  border-bottom: none;
+}
+
+.cv-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.15rem;
+}
+
+.cv-entry-title {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.cv-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cv-org {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem 0;
+}
+
+.cv-org a {
+  color: var(--link);
+}
+
+.cv-org a:hover {
+  color: var(--link-hover);
+}
+
+.cv-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 0.75rem 0;
+}
+
+/* ── Tags ────────────────────────────────────────────── */
+
+.cv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.cv-tag {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  border: var(--line) solid var(--text-secondary);
+  padding: 0.1rem 0.4rem;
+  margin: 0.15rem 0.2rem 0 0;
+}
+
+/* ── Skills grid ─────────────────────────────────────── */
+
+.cv-skills-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-skill-category {
+  padding: 1rem 2rem 0 0;
+}
+
+.cv-skill-category:last-child {
+  border-bottom: none;
+  padding: 1rem 0 0 0;
+}
+
+.cv-skill-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+}
+
+.cv-skill-category p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Languages ───────────────────────────────────────── */
+
+.cv-languages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cv-lang-item {
+  font-size: 0.9rem;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.cv-lang-item:last-child {
+  border-right: none;
+}
+
+.cv-lang-level {
+  color: var(--text-secondary);
+}
+
+/* ── Tablet: skills side by side ─────────────────────── */
+
+@media (min-width: 800px) {
+  .cv-skills-grid {
+    flex-direction: row;
+  }
+
+  .cv-skill-category {
+    flex: 1;
+    border-bottom: none;
+  }
+
+  .cv-skill-category:last-child {
+    border-right: none;
+  }
+}
+
+/* ══ PRINT STYLES ══════════════════════════════════════
+   Ctrl+P → Save as PDF in Chrome produces a selectable
+   text layer. System fonts are used site-wide so there
+   is no font-loading race condition.
+════════════════════════════════════════════════════════ */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm 1.8cm;
+  }
+
+  /* Hide site chrome */
+  body > .layout > header,
+  body > .layout > footer,
+  .cv-download {
+    display: none !important;
+  }
+
+  /* Reset body and main for print — override site's padding: 2rem on main */
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .cv {
+    max-width: 100%;
+  }
+
+  /* Tighten font sizes for A4 */
+  .cv-name          { font-size: 18pt; }
+  .cv-section-title { font-size: 6.5pt; }
+  .cv-entry-title   { font-size: 9pt; }
+  .cv-jobtitle,
+  .cv-summary,
+  .cv-desc          { font-size: 8.5pt; }
+  .cv-org,
+  .cv-date,
+  .cv-tag,
+  .cv-skill-category p,
+  .cv-lang-item     { font-size: 8pt; }
+
+  /* Tighten spacing — no padding overrides, just margin compression */
+  .cv-header        { margin-bottom: 1rem; }
+  .cv-section       { margin-bottom: 1rem; }
+  .cv-section-title { padding-top: 1rem; }
+  .cv-entry         { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+
+  /* Prevent entries splitting across pages */
+  .cv-entry         { break-inside: avoid; }
+  .cv-section       { break-inside: avoid; }
+  .cv-section-title { break-after: avoid; }
+
+  /* Keep links readable but unstyled */
+  a { color: var(--text-primary) !important; text-decoration: none !important; }
+}

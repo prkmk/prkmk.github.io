@@ -511,9 +511,11 @@ footer p {
 }
 
 
+.hide-mobile { display: none; }
 
 /* Media overrides */
 @media (min-width: 800px) { /* Tablet styles */
+  .hide-mobile { display: initial; }
   body {
     width: calc(100vw - 4rem);
     margin: 0 auto;

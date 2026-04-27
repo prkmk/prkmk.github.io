@@ -9,10 +9,10 @@
     "keywords": "UX, sustainability, ASCII, design, portfolio"
   },
   "external": {
-    "LinkedIn": "https://www.linkedin.com/in/prkmk/",
-    "Figma": "https://www.figma.com/@prkmk",
-    "Medium": "https://prkmk.medium.com/",
-    "Art": "https://littlebitspace.com"
+    "LinkedIn": {"url": "https://www.linkedin.com/in/prkmk/", "mobile": true},
+    "Figma": {"url": "https://www.figma.com/@prkmk", "mobile": false},
+    "Medium": {"url": "https://prkmk.medium.com/", "mobile": false},
+    "Art": {"url": "https://littlebitspace.com", "mobile": false}
   },
   "projectLimit": 4,
   "postLimit": 3

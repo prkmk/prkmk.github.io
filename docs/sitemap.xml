@@ -2,6 +2,11 @@
   <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://parkkamaki.com/cv.css</loc>
+      <lastmod>2026-04-24T06:04:01.222Z</lastmod>
+    </url>
+  
+    <url>
       <loc>https://parkkamaki.com/styles.css</loc>
       <lastmod>2026-04-22T05:03:20.199Z</lastmod>
     </url>
@@ -94,6 +99,11 @@
     <url>
       <loc>https://parkkamaki.com/portfolio/</loc>
       <lastmod>2026-04-22T05:03:20.186Z</lastmod>
+    </url>
+  
+    <url>
+      <loc>https://parkkamaki.com/cv/</loc>
+      <lastmod>2026-04-24T06:04:01.249Z</lastmod>
     </url>
   
   </urlset>

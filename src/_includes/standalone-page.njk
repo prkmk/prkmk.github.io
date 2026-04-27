@@ -27,47 +27,13 @@
   <link rel="manifest" href="/favicon/site.webmanifest">
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/cv.css" />
 </head>
 <body>
   <div class="layout">
-    <header>
-      <ul class="title">
-        <li><a href="/">{{ site.title }}</a></li>
-        {% for label, item in site.external %}
-          <li class="{% if not item.mobile %}hide-mobile{% endif %}">
-            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ label }}</a>
-          </li>
-        {% endfor %}
-        <li><a href="#" id="theme-toggle"></a></li>
-      </ul>
-      <nav>
-        <ul class="tab-nav">
-          {% for pageEntry in collections.main %}
-            <li class="{% if pageEntry.url != '/' and page.url.startsWith(pageEntry.url) or page.url == pageEntry.url %}active{% endif %}">
-              <a href="{{ pageEntry.url }}">
-                {{ pageEntry.data.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </header>
-
     <main>
       {% block content %}{{ content | safe }}{% endblock %}
     </main>
-
-    <footer>
-      <p>&copy; {{ site.meta.copyright }} | Built with <a href="https://www.11ty.dev/">11ty</a> | Designed by <a href="https://parkkamaki.com/">Lauri Parkkamäki</a></p>
-      <div class="co2">
-        <p class="content" id="page-weight">🌱 Every click has a footprint.</p>
-        <span class="tooltip">This site is designed this to stay light — faster for you, better for the planet.</span>
-      </div>
-    </footer>
   </div>
-  <script src="/scripts/page-weight.js"></script>
-  <script src="/scripts/div-anchors.js"></script>
-  <script src="/scripts/theme-toggle.js"></script>
-  <script src="/scripts/like-button.js"></script>
 </body>
 </html>
